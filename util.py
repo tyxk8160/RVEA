@@ -7,7 +7,7 @@ from scipy.io import loadmat
 
 def _get_pop(gens,objects,popsize):
     pop=[{'id':i,'gens':gens[i],'objectives':objects[i]} for i in range(popsize)]
-    print pop
+    return pop
 
 def get_funvalue(pop):
     '''
@@ -23,8 +23,6 @@ def get_funvalue(pop):
     
     return FunValue
    
-
-
 def ref_vector_T(V_t):
     '''
     V_t is an matrix

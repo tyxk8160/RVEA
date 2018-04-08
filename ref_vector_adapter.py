@@ -31,6 +31,6 @@ if __name__ == '__main__':
    
     V_t=ref_vector_adapter(V_0,V_t,FunValue,t,T_min)
     # print(V_t-V)
-    print V_t
+    print(np.sum(V_t-V,axis=1))
 
 

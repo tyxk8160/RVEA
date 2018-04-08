@@ -66,7 +66,7 @@ def test(m,d,insi_d):
     #vectors_new2 = get_inside_vectorlist(m,insi_d)
     #print vectors_new2
 
-        print (get_vectorlist(m,d))
+        return get_vectorlist(m,d)
     else:
         L=get_vectorlist(m,d)+get_inside_vectorlist(m,insi_d)
         # print (get_vectorlist(m,d)+get_inside_vectorlist(m,insi_d))

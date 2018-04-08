@@ -24,12 +24,12 @@ def _select(FunValue,V_t,refV,theta0):
     V_t=np.asmatrix(V_t)
     _cosine=uFunValue1*V_t.T
     _cosine=np.asanyarray(_cosine)
-    tmp_x=_cosine[_cosine>1.0]
-    tmp_y=_cosine[_cosine<-1.0]
-    if tmp_x.any():
-        print(tmp_x)
-    if tmp_y.any():
-        print(tmp_y)
+    # tmp_x=_cosine[_cosine>1.0]
+    # tmp_y=_cosine[_cosine<-1.0]
+    # if tmp_x.any():
+    #     print(tmp_x)
+    # if tmp_y.any():
+    #     print(tmp_y)
     
 
     _acosine=np.arccos(_cosine)
@@ -140,7 +140,7 @@ def _select(FunValue,V_t,refV,theta0):
 
 if __name__ == '__main__':
     from scipy.io import loadmat
-    dat=loadmat('select_test2.mat')
+    dat=loadmat('data.mat')
     
     theta0=dat['theta0']
     refV=dat['refV']

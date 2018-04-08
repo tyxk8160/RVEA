@@ -19,10 +19,6 @@ from generate_reference_point import test
 
 
 
-
-
-
-
 def _loopone(alpha,pop,V_0,V_t,t,tmax=100):
 #     fr=0.1
 #    # tmax=300
@@ -42,7 +38,7 @@ def _loopone(alpha,pop,V_0,V_t,t,tmax=100):
     Funvalue=FunValue[select_index,:]
     Vt_1=ref_vector_adapter(V_0,V_t,FunValue,t)
 
-    print pop,Vt_1
+    return pop,Vt_1
 
 
 
@@ -63,16 +59,16 @@ def _loopone(alpha,pop,V_0,V_t,t,tmax=100):
 
 
 if __name__ == '__main__':
-    popsize=13
+    popsize=105
     t_max=2000
     genecount=7
-    V_0=test(3,3,1)
+    V_0=test(3,15,0)
     V_0=np.array(V_0)
     V_t=np.copy(V_0)
     pop=init(popsize,t_max,genecount)
     for t in range(t_max):
         pop,V_t=_loopone(0.1,pop,V_0,V_t,t,t_max)
-        # print(t)
+        print(t)
         # print(np.sum((V_0-V_t)**2,axis=1))
         
 
