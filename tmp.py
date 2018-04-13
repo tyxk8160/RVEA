@@ -9,7 +9,7 @@ def init(popsize,generation,genecount):#gegerating parent population
     for i in range(popsize):
         ind={}
         ind['id']=i
-        ind['genes']=[random.uniform(0,1)for j in range(genecount)]
+        ind['genes']=[random.uniform(0,1) for j in range(genecount)]
         pop.append(ind)
         pop[i]=evaluate(pop[i])
     return pop
