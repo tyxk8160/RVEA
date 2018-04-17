@@ -8,7 +8,7 @@ from tmp import *
 from _select import  _select
 from output import output
 from problem.DTZ2 import evaluate
-from EAreal import _offspring_pop
+from mtest.EAreal import _offspring_pop
 
 
 def reference_vectort_adapt(V_0,FunValue):
@@ -137,7 +137,7 @@ def main():
 
     popsize=105
     t_max=500
-    genecount=12
+    genecount = 7
     V_0,popsize=uniform_point(popsize,3)
     V_0=np.array(V_0)
     V_t=np.copy(V_0)
@@ -154,7 +154,7 @@ def main():
 
 
 if __name__ == '__main__':
-    test() 
+    # test() 
     main()
 
     

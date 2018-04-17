@@ -11,7 +11,6 @@ Nearzero = 1.0e-15
 delta = 1e-8
 
 
-
 def caculate_nichecount(inds,sigma):
     '''
     describe：
@@ -21,10 +20,10 @@ def caculate_nichecount(inds,sigma):
         inds: np.array, Nxgens
         sigma:float, radius
     return:
-        nc: list , nichecout list
+        None
     '''
     N,_ = inds.shape
-    nc = []
+
     for i in range(N):
         # caculate distance
         # if dst >\sigma,then sh(x_1,x_2) = 0; => \frac {d(\vec x_1,\vec x_2)} {\sigma} \geq 1 =>sh<0
@@ -38,11 +37,11 @@ def caculate_nichecount(inds,sigma):
 
         sh = 1 - 1.0*dst/sigma
         sh[sh <0] = 0
-        nc.append(np.sum(sh)-1)
-    return nc
+        inds['i']['nichec'] = np.sum(sh)-1
+     
 
 
-def get_iter_params(MaxK,lower,N,upper,pointAmount):
+def get_niche_params(MaxK,lower,N,upper,pointAmount):
     '''
     describe:
         get initial sigma and param C,D

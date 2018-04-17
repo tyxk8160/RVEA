@@ -29,7 +29,7 @@ def HV(popobj,PF):
                                 axis=1),
                     axis =0) #删除行
     if popobj.shape[0] is 0：
-        score = 0
+        score = 0.0
     elif d < 5:
         # 按照矩阵的第一列进行排序
         #
@@ -68,7 +68,7 @@ def HV(popobj,PF):
 def Slice(pl,k,RefPoint):
     '''
     descripe:
-        计算slice
+        计算slice,分片操作
     args:
         pl:vector or matrix?
         k:第 k 个维度 

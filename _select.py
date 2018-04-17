@@ -4,7 +4,7 @@ import numpy as np
 def log(fun):
     def wrap(FunValue,V_t,refV,theta0):
         ret = fun(FunValue,V_t,refV,theta0)
-        print(ret)
+        # print(" "*20+"refV:",refV.shape[0])
         return ret
     return wrap
 
@@ -67,74 +67,13 @@ def _select(FunValue,V_t,refV,theta0):
 
 
 
-# def reference_vector_guided_selection(pop,t,V_t,tmax):
-#     '''
-#         pop --->population
-#         t   --->generatio
-#         V_t --->unit refernce vector set
-#     '''
-#     FunValue = np.asarray([pop_tmp['objectives'] for pop_tmp in pop],dtype=float)
-#     N,M=FunValue.shape
 
-    
-#     Z_min = np.min(FunValue,axis=0)
-#     #Translation
-#     FunValue1 = FunValue-Z_min
-#     # shape error,fuck numpy
-#     #WTF shape=(M,)
-#     uFunValue1 = FunValue/np.sqrt(np.sum(np.square(FunValue1),axis=1)).reshape(N,1)
-#     _cosine = np.sum (np.multiply(uFunValue1,V_t),axis=1).reshape(N,1)
-#     _acosine = np.arccos(_cosine)
-#     tmpV_t=np.matrix(V_t)
-#     minVt = tmpV_t*tmpV_t.T
-#     INF=1<<27
-#     for i in range(N):
-#         minVt[i,i]=INF
-    
-#     minVt=np.min(np.array(minVt),axis=1)
-#     # WTF bad for loop
-#     index=np.argmax(_cosine,axis=1)
-#     for i in range(N):
-#         k=index[i]
-#         PP[k].append(pop[i])
-
-#     # genes
-#     new_pop=[]
-#     for i in range(M):
-#         uVti=minVt[i]
-#         individual_index = PP[i]
-#         subuFunvalue = uFunValue[individual_index,:] # OK or not
-#         subacos = _acosine[individual_index]
-#         # APD
-#         PD1 = 1+ M*np.math.pow((t/tmax),alpha)*subacos/uVti
-#         APD = np.multiply(PD1,subuFunvalue)
-#         select_index=np.amin(APD)
-#         new_pop.append(copy.deepcopy(pop[individual_index[select_index]]))
-#     return new_pop
-    
-   
-
-
-
-        
-# def main():
-#     dat=loadmat('select_test2.mat')
-    
-#     theta0=dat['theta0']
-#     refV=dat['refV']
-#     objects=dat['FunctionValue']
-#     V=dat['V']
-#     select_t=dat['Selection']
-   
-
-#     select=_select(objects,V,refV,theta0)
-#     print(select)
 
 
 
 
     
-#     pass
+
 
     
 
@@ -147,10 +86,14 @@ if __name__ == '__main__':
     objects=dat['FunctionValue']
     V=dat['V']
     select_t=dat['Selection']
+    select_t = select_t-1
+    select_t= select_t.reshape(1,-1)
    
 
-    select=_select(objects,V,refV,theta0)
-    print(select)
+    select=np.array(_select(objects,V,refV,theta0)).reshape(1,-1)
+
+    
+    print(select-select_t)
 
 
     

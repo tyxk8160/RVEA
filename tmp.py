@@ -3,6 +3,8 @@ import copy
 import math
 import numpy as np
 from collections import defaultdict
+import problem.DTZ2 as problem
+evaluate = problem.evaluate
 def init(popsize,generation,genecount):#gegerating parent population
     global pop
     pop=[]
@@ -11,12 +13,12 @@ def init(popsize,generation,genecount):#gegerating parent population
         ind['id']=i
         ind['genes']=[random.uniform(0,1) for j in range(genecount)]
         pop.append(ind)
-        pop[i]=evaluate(pop[i])
+        evaluate(pop[i])
     return pop
 F=0.5
 CR=0.9
 def offspring_pop(pop,popsize,genecount):#generating offspring population
-    global _pop
+    # global _pop
     _pop=copy.deepcopy(pop)
     for i in range(popsize):
         n=random.sample(range(popsize),3)
@@ -33,11 +35,11 @@ def offspring_pop(pop,popsize,genecount):#generating offspring population
                 _pop[i]['genes'][k]=u
             else:
                 _pop[i]['genes'][k]=pop[i]['genes'][k]
-        j=(j+1)%genecount
-    _pop[i]=evaluate(_pop[i])
+            j=(j+1)%genecount
+        evaluate(_pop[i])
     return _pop
 
-def evaluate(ind):#evaluate individuals
+def _evaluate(ind):#evaluate individuals
     r=ind
     g3=0.0
     x=ind['genes']
