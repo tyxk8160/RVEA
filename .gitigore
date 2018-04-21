@@ -1,6 +1,7 @@
 !*.pyc
 !*.log
 __pycache__/*
+*.pyc
 *.diff
 *.mat
 *.tex
