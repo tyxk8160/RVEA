@@ -47,10 +47,8 @@ class EAreal(OpBase):
         shuffle(index)
         index1 = index[:N//2]
         index2 = index[N//2:]
-        # print(index1)
-        # print(index2)
-        # print(index)
-        
+
+
         Parent1 = np.array([Parent[i]['genes'] for i in index1])
         Parent2 = np.array([Parent[i]['genes'] for i in index2])
         '''

@@ -46,7 +46,21 @@ def _select(FunValue,V_t,refV,theta0):
     Z_min = np.min(FunValue,axis=0)
     FunValue1 = FunValue-Z_min
     FunValueNorm=np.sqrt(np.sum(np.square(FunValue1),axis=1)).reshape(-1,1)
-    uFunValue1 = FunValue1/FunValueNorm
+    # index = np.abs(FunValue)<1e-15
+    # FunValue[index] = 1.0
+    try:
+        # print(FunValue1)
+     
+        uFunValue1 = FunValue1/FunValueNorm
+
+        
+    except RuntimeWarning as e:
+        print(FunValue)
+        print(FunValueNorm)
+        print(e)
+
+    
+    # uFunValue1[index] = 0.0
     ###  _cosvalue
     #
     #
