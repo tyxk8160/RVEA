@@ -3,6 +3,7 @@ import numpy as np
 
 from ..AlgorithmBase import AlgorithmBase
 from util.PopulationUtil import initpopulation,evaluate_pop
+from .dynamic import DynamicEevaluation
 # from util.uniform_point import uniform_point
 
 
@@ -11,12 +12,13 @@ from .APDSelect import APDSelect
 
 
 
-class RVEA(AlgorithmBase):
+class nRVEA(AlgorithmBase):
     def __init__(self,problem,op,popsize,generations,
         alpha =2.0 ,fr = 0.1):
         self.alpha = alpha
         self.fr = fr
-        super(RVEA,self).__init__(problem,op,popsize,generations)
+        self.ev = DynamicEevaluation(popsize,problem,generations)
+        super(nRVEA,self).__init__(problem,op,popsize,generations)
     
     def __call__(self):
         M = self.problem.M 
@@ -68,9 +70,10 @@ class RVEA(AlgorithmBase):
             #     np.asarray([pop_tmp['objects'] for pop_tmp in pop],dtype=float))
             pop = _pop+pop
 
-            pop = evaluate_pop(pop, self.problem)
+            # pop = evaluate_pop(pop, self.problem)
+            pop = self.ev(pop)
            
-
+           
             pop ,Vt = select(pop)
             self.notify(pop)
         
