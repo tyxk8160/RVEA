@@ -21,7 +21,7 @@ def ReferenceVectorRegeneration(Va,FunValue):
         Va: new vector
     '''
     popsize,M=FunValue.shape
-    N,M=V_t.shape
+    N,M=Va.shape
     Z_min = np.min(FunValue,axis=0)
     Z_max = np.max(FunValue,axis =0 )
     FunValue1 = FunValue-Z_min
@@ -63,7 +63,7 @@ def ReferenceVectorRegeneration(Va,FunValue):
 
 
     # random
-    Va = np.array(va)
+    Va = np.array(Va)
     Va[index,:] = np.random.rand(sum(index),M)*Z_max
 
     return Va

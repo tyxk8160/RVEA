@@ -13,16 +13,22 @@ from problem.C2DTLZ2 import C2DTLZ2Problem
 from util.UniformPoint import uniform_point,generate_point
 
 from op.EAreal import EAreal
+
 from output.mlog import Foo
-from algorithm.nrvea.RVEA import nRVEA
+from output.DynamicOut import DynamicOut
 from output.FigureOut import FigureOut
 from output.FileOut import FileOut
-from metrics.hyperholume import HyperVolume
+
+from algorithm.nrvea.RVEA import nRVEA
+from algorithm.rvea.RVEA import RVEA
+
+from metrics.hyperholume import HyperVolume,hv_compute
 
 
 
 
-problem = C2DTLZ2Problem(7) # var count is 12
+# problem = C2DTLZ2Problem(7) # var count is 12
+problem = DTLZ2Problem(12)
 
 op = EAreal() # EAreal operator
 TrueValue, _= uniform_point(1000,3)
@@ -32,11 +38,11 @@ TrueValue, _= uniform_point(1000,3)
 # fig = FigureOut(TrueValue)
 fo = FileOut('result/log.txt')
 
-alg = nRVEA(problem,op,400,generations = 500)
+alg = RVEA(problem,op,105,generations = 500)
 # alg.subscribe(fig)
-alg.subscribe(fo)
+# alg.subscribe(fo)
 pop,Vt = alg()
-pop = [pop_tmp for pop_tmp in pop if pop_tmp['cv0']<1e-15]
+# pop = [pop_tmp for pop_tmp in pop if pop_tmp['cv0']<1e-15]
 
 
 
@@ -51,6 +57,7 @@ hv  =HyperVolume([2.0,2.0,2.0])
 # # print(type(front[0]))
 
 print('HV=',hv.compute(front)/(2.0**3))
+print('HV=',hv_compute(FunValue,np.array([2.0,2.0,2.0])))
 
 
 output(TrueValue,FunValue)

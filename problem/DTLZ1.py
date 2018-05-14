@@ -18,6 +18,13 @@ class DTLZ1Problem(ProblemBase):
         '''
         self.D = D
         self.M = M
+    @property
+    def R(self):
+        '''
+        refpoint
+        '''
+        return [1.5]*self.M
+        
     def evaluate(self,ind):
         '''
         describe:

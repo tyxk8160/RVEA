@@ -16,6 +16,7 @@
 
 
 __author__ = "Simon Wessing"
+import numpy as np
 
 
 class HyperVolume:
@@ -293,6 +294,40 @@ def parse_data(file_name):
                 row.append(float(val))
             data_mat.append(row)
         return data_mat    
+
+
+
+def HV(front,Refpoint):
+    '''
+    a wrap of Hypervolume Compute
+    '''
+    M = len(Refpoint)
+    if M >5:
+       
+        hv = hv_compute(np.array(front),np.array(Refpoint))
+    else:
+        mhv = HyperVolume(Refpoint)
+        hv = mhv.compute(front)
+        hv = hv/np.prod(Refpoint)
+    return hv
+def hv_compute(popobj,R):
+    '''
+    compute hv
+    '''
+    SampleNum = 100000
+    MinValue = 0
+    Samples = np.random.rand(SampleNum,len(R))*R
+    Domi = np.zeros((1,SampleNum))
+    for i in range(popobj.shape[0]):
+        index =  np.nonzero(np.all(popobj[i,:]<=Samples,
+                    axis = 1))
+        # print(index)
+        Domi[0,index] =1
+    
+    hv = np.sum(Domi[0,:])/SampleNum
+
+    return hv
+    
 
 
 if __name__ == "__main__":

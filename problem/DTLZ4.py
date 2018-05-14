@@ -19,6 +19,13 @@ class DTLZ4Problem(ProblemBase):
         self.D = D
         self.alpha = 100.0
         self.M = M
+    @property
+    def R(self):
+        '''
+        refpoint
+        '''
+        return [2.0]*self.M
+        
     def evaluate(self,ind):
         '''
         describe:

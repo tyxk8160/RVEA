@@ -20,23 +20,24 @@ def reference_vectort_adapt(V_0,FunValue):
     return V_t
 
 
-
 def ref_vector_T(V_t):
     '''
     V_t is an matrix
     '''
     tmpV_t=np.matrix(V_t)
     minVt = tmpV_t*tmpV_t.T
+    minVt[minVt>=1.0] = -1.0
     minVt.sort(axis=1)
-    refV=minVt[:,-2]
-    acos=np.frompyfunc(np.math.acos,1,1)
+    
+    refV=minVt[:,-1]
+    # acos=np.frompyfunc(np.math.acos,1,1)
     ###########################################################################
     #             ufunc  
     #
     ############################################################################
-    refV=acos(refV)
+    refV=np.arccos(refV)
+  
     return refV.reshape(-1,1)
-
 
 
 

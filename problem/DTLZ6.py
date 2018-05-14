@@ -39,7 +39,7 @@ class DTLZ6Problem(ProblemBase):
         g = np.sum(np.power(x, 0.1))
         F = []
         ## theta
-        x[1:] = np.pi/(4*(1=g))*(1+g*x[1:])
+        x[1:] = np.pi/(4*(1+g))*(1+g*x[1:])
         
         for i in range(M):
             f = (1+g)*np.prod(np.cos(x[:M-1-i]*np.pi/2))

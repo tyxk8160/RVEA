@@ -30,6 +30,9 @@ def initpopulation(popsize,D,lower,upper):
     return:
         population
     '''
+  
+    lower = np.array(lower)
+    upper = np.array(upper)
     PopDes = lower + (upper-lower)*np.random.rand(popsize,D)
 
     return CreatePopulation(PopDes)

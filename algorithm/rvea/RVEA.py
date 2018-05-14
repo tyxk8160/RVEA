@@ -29,6 +29,7 @@ class RVEA(AlgorithmBase):
         self.V_t = np.copy(self.V_0)
         Pop = initpopulation(self.popsize,D,lower,upper)
         pop ,Vt = self.loop(Pop,self.V_0,self.generations)
+        self.close()
         return pop,Vt
     
 

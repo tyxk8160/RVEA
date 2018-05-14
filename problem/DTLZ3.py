@@ -15,6 +15,13 @@ class DTLZ3Problem(ProblemBase):
         '''
         self.D = D
         self.M = M
+    @property
+    def R(self):
+        '''
+        refpoint
+        '''
+        return [2.0]*self.M
+        
     def evaluate(self,ind):
         '''
         describe:
@@ -34,7 +41,7 @@ class DTLZ3Problem(ProblemBase):
         # print('DTLZ3')
         if D != self.D:
             raise ValueError('Genes count must equal D')
-        g =D - M +1 +np.sum(np.square(x[M-1:]-0.5)) - np.sum(np.cos(x[M-1:] - 0.5))
+        g =100*(D - M +1 +np.sum(np.square(x[M-1:]-0.5)) - np.sum(np.cos(x[M-1:] - 0.5)))
         F = []
         for i in range(M):
             f = (1+g)*np.prod(np.cos(x[:M-1-i]*np.pi/2))
