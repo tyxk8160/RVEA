@@ -17,6 +17,14 @@ class DTLZ5Problem(ProblemBase):
         '''
         self.D = D
         self.M = M
+
+    @property
+    def R(self):
+        '''
+        refpoint
+        '''
+        return [1+np.sqrt(2)]*(self.M-1)+[2]
+        
     def evaluate(self,ind):
         '''
         describe:
@@ -36,7 +44,7 @@ class DTLZ5Problem(ProblemBase):
         g = np.sum(np.square(x[M-1:]-0.5))
         F = []
         ## theta
-        x[1:] = np.pi/(4*(1+g))*(1+g*x[1:])
+        x[1:] = (1+2*g*x[1:])/(2+g*2.0)
         
         for i in range(M):
             f = (1+g)*np.prod(np.cos(x[:M-1-i]*np.pi/2))

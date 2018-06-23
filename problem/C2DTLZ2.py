@@ -27,6 +27,12 @@ class C2DTLZ2Problem(ProblemBase):
         '''
         self.D = D
         self.M = M
+    @property
+    def R(self):
+        '''
+        refpoint
+        '''
+        return [2.0]*self.M
     def evaluate(self,ind):
         '''
         describe:

@@ -42,7 +42,7 @@ alg = RVEA(problem,op,105,generations = 500)
 # alg.subscribe(fig)
 # alg.subscribe(fo)
 pop,Vt = alg()
-# pop = [pop_tmp for pop_tmp in pop if pop_tmp['cv0']<1e-15]
+# pop = [pop_tmp for pop_tmp in pop if pop_tmp['cv1']<1e-15]
 
 
 
