@@ -1,0 +1,61 @@
+this is nsga_ii
+run is 25
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2000, 'constraints': [-1.1986077955898969e-12], 'filename': None}, 'objectives': [0.7499000000013573], 'genes': [0.8535181743211864, 0.7500001991501701], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070363486423727, 0.5000003983003403], 'violations': [0], 'id': 17}, 210210, 2001)
+run is 24
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2002, 'constraints': [-3.8309347285148815e-13], 'filename': None}, 'objectives': [0.7499000000005367], 'genes': [0.8535181720465214, 0.7500001959340362], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070363440930427, 0.5000003918680724], 'violations': [0], 'id': 33}, 210525, 2004)
+run is 23
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1997, 'constraints': [-6.795666731163746e-14], 'filename': None}, 'objectives': [0.749900000000861], 'genes': [0.1464822813922445, 0.7499995547392304], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.707035437215511, 0.4999991094784608], 'violations': [0], 'id': 2}, 210420, 2003)
+run is 22
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2000, 'constraints': [-1.314903657419382e-12], 'filename': None}, 'objectives': [0.7499000000045499], 'genes': [0.14648133053672394, 0.7500008993175126], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070373389265521, 0.5000017986350251], 'violations': [0], 'id': 87}, 210315, 2002)
+run is 21
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2000, 'constraints': [-1.891275940653532e-12], 'filename': None}, 'objectives': [0.7499000000023268], 'genes': [0.1464817331673369, 0.7500003299677943], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070365336653262, 0.5000006599355886], 'violations': [0], 'id': 7}, 210315, 2002)
+run is 20
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1997, 'constraints': [-1.548938671010365e-12], 'filename': None}, 'objectives': [0.7499000000023934], 'genes': [0.8535177085411945, 0.7499995405036594], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070354170823889, 0.4999990810073187], 'violations': [0], 'id': 30}, 210105, 2000)
+run is 19
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2000, 'constraints': [-1.0734856607146417e-12], 'filename': None}, 'objectives': [0.749900000002227], 'genes': [0.8535184132429776, 0.7500005370031286], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070368264859552, 0.5000010740062573], 'violations': [0], 'id': 23}, 210315, 2002)
+run is 18
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2001, 'constraints': [-1.7981282288874814e-12], 'filename': None}, 'objectives': [0.7499000000030188], 'genes': [0.8535176428239674, 0.7499994475747292], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070352856479347, 0.4999988951494585], 'violations': [0], 'id': 0}, 210315, 2002)
+run is 17
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2003, 'constraints': [-3.255284090246738e-13], 'filename': None}, 'objectives': [0.7499000000008216], 'genes': [0.8535177844560125, 0.7499996478532126], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070355689120249, 0.4999992957064252], 'violations': [0], 'id': 3}, 210420, 2003)
+run is 16
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1999, 'constraints': [-1.0122013497553331e-12], 'filename': None}, 'objectives': [0.7499000000010805], 'genes': [0.14648205893532792, 0.7499998693087038], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070358821293441, 0.49999973861740754], 'violations': [0], 'id': 70}, 210315, 2002)
+run is 15
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1998, 'constraints': [-5.095478753562935e-13], 'filename': None}, 'objectives': [0.749900000001346], 'genes': [0.14648164312152068, 0.750000457299865], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070367137569586, 0.50000091459973], 'violations': [0], 'id': 12}, 210105, 2000)
+run is 14
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1999, 'constraints': [-2.212074883618971e-12], 'filename': None}, 'objectives': [0.7499000000022122], 'genes': [0.853518038155987, 0.7500000066022098], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070360763119741, 0.5000000132044196], 'violations': [0], 'id': 102}, 210315, 2002)
+run is 13
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1998, 'constraints': [-4.623633968097243e-13], 'filename': None}, 'objectives': [0.7499000000006466], 'genes': [0.853518185232256, 0.7500002145795841], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.707036370464512, 0.5000004291591682], 'violations': [0], 'id': 43}, 210315, 2002)
+run is 12
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2000, 'constraints': [-1.555822053763041e-12], 'filename': None}, 'objectives': [0.7499000000023845], 'genes': [0.14648228840992217, 0.749999544814993], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070354231801557, 0.49999908962998596], 'violations': [0], 'id': 29}, 210420, 2003)
+run is 11
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2001, 'constraints': [-1.6123879168676927e-12], 'filename': None}, 'objectives': [0.7499000000016321], 'genes': [0.1464819168459936, 0.7500000702329598], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070361663080128, 0.5000001404659196], 'violations': [0], 'id': 13}, 210315, 2002)
+run is 10
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2001, 'constraints': [-1.7824740842402667e-12], 'filename': None}, 'objectives': [0.7499000000017882], 'genes': [0.14648193967105186, 0.7500000379565924], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070361206578963, 0.5000000759131848], 'violations': [0], 'id': 28}, 210420, 2003)
+run is 9
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1998, 'constraints': [-2.495847888713161e-12], 'filename': None}, 'objectives': [0.7499000000031151], 'genes': [0.8535177552439266, 0.7499996065441616], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070355104878532, 0.4999992130883233], 'violations': [0], 'id': 14}, 210105, 2000)
+run is 8
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1995, 'constraints': [-5.0233142569623e-13], 'filename': None}, 'objectives': [0.7499000000012999], 'genes': [0.1464822822860157, 0.7499995534751575], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070354354279687, 0.4999991069503149], 'violations': [0], 'id': 80}, 210420, 2003)
+run is 7
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1991, 'constraints': [-2.1211476179021707e-12], 'filename': None}, 'objectives': [0.7499000000024963], 'genes': [0.14648218310545746, 0.749999693722706], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070356337890851, 0.49999938744541206], 'violations': [0], 'id': 34}, 210210, 2001)
+run is 6
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1992, 'constraints': [-8.916101106666748e-12], 'filename': None}, 'objectives': [0.7499000000096738], 'genes': [0.1464822742867513, 0.7499995647824774], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070354514264974, 0.49999912956495485], 'violations': [0], 'id': 22}, 210210, 2001)
+run is 5
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2002, 'constraints': [-1.6021620065798797e-13], 'filename': None}, 'objectives': [0.7499000000008741], 'genes': [0.8535183322448023, 0.7500004224662128], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070366644896047, 0.5000008449324256], 'violations': [0], 'id': 23}, 210420, 2003)
+run is 4
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1999, 'constraints': [-2.828470706890858e-12], 'filename': None}, 'objectives': [0.7499000000044027], 'genes': [0.85351847712605, 0.7500006273376288], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070369542521, 0.5000012546752577], 'violations': [0], 'id': 45}, 210210, 2001)
+run is 3
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2001, 'constraints': [-1.0564873899766153e-13], 'filename': None}, 'objectives': [0.749900000000134], 'genes': [0.14648190699253083, 0.7500000841672224], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070361860149383, 0.5000001683344448], 'violations': [0], 'id': 35}, 210315, 2002)
+run is 2
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 2001, 'constraints': [-6.386113019689679e-13], 'filename': None}, 'objectives': [0.7499000000007409], 'genes': [0.8535179204306331, 0.7499998401308796], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [0.7070358408612663, 0.4999996802617592], 'violations': [0], 'id': 11}, 210420, 2003)
+run is 1
+({'violation_objectives': [0.0, 0.0], 'extrainfo': {'generation': 1997, 'constraints': [-2.591370721520894e-13], 'filename': None}, 'objectives': [0.7499000000010594], 'genes': [0.14648165019876547, 0.7500004472922465], 'nondomLayer': [0], 'efeasible': 1, 'pheno': [-0.7070366996024691, 0.5000008945844929], 'violations': [0], 'id': 7}, 210420, 2003)
+maxo is 0.74990000001
+mino is 0.7499
+the average is 0.749900000002
+variance is 1.89817783261e-12
+the generation is [2001, 2004, 2003, 2002, 2002, 2000, 2002, 2002, 2003, 2002, 2000, 2002, 2002, 2003, 2002, 2003, 2000, 2003, 2001, 2001, 2003, 2001, 2002, 2003, 2003]
+the average generation is 2002.0
+variance generation is 1.05830052443
+the evaTime is [210210, 210525, 210420, 210315, 210315, 210105, 210315, 210315, 210420, 210315, 210105, 210315, 210315, 210420, 210315, 210420, 210105, 210420, 210210, 210210, 210420, 210210, 210315, 210420, 210420]
+the average evaTime is 210315.0
+variance evaTime 111.121555065
